@@ -13,3 +13,26 @@
 // - oltre a Vue, ora abbiamo diversi strumenti in più nelle nostre tasche, che possono tornarci utili per svolgere 
 // l'esercizio in una versione più evoluta ed efficace, soprattutto per quando riguarda la struttura dei dati. 
 // Forse questa volta possiamo fare qualcosa di meglio di 3 array separati... sì, ma cosa?
+
+
+const app = new Vue({
+    el: '#root',
+    data: {
+        images:[ 
+            'img/01.jpg',
+            'img/02.jpg',
+            'img/03.jpg',
+            'img/04.jpg',
+            'img/05.jpg'
+        ],
+        currentImg: 0
+    },
+    methods: {
+        nextImage: function () {
+            this.currentImg++;
+        },
+        prevImage: function() {
+            this.currentImg--;
+        }
+    }
+});
