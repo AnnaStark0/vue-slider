@@ -73,6 +73,15 @@ text-align: center;
     width: 100%;
     height: calc(60vh / 5);
     object-fit: cover;
+    
+}
+
+.grey {
+filter: grayscale(3);
+}
+
+.grey.active {
+    filter: none;
 }
 
 .fa-chevron-circle-up , .fa-chevron-circle-down {
