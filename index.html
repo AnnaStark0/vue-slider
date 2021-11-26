@@ -16,14 +16,12 @@
 <div id="root">
     <div class="container">
 
-
         <div class="carousel">
 
             <div class="col-1">
                 <img :src="images[currentImg]">
 
-                <div class="text">
-                </div>
+                <div class="text"></div>
             </div>
 
 
@@ -31,16 +29,12 @@
            
                     <span> <i class="fas fa-chevron-circle-up" @click="prevImage()"></i> </span>
 
-
                 <div class="box grey" v-for="(image, index) in images" :class="index == currentImg ? 'active' : '' " @click="selectImg(index)">
                     <img :src="image" >
                 </div>
 
-
-            
                     <span> <i class="fas fa-chevron-circle-down" @click="nextImage()"> </i> </span>
                     
-             
             </div>
 
         </div>
