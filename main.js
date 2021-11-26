@@ -29,10 +29,18 @@ const app = new Vue({
             },
             methods: {
                 nextImage: function () {
+                    if( this.currentImg == this.images.length - 1 ) {
+                        this.currentImg = 0;
+                    } else {
                     this.currentImg++;
+                    }
                 },
                 prevImage: function () {
+                    if ( this.currentImg == 0 ) {
+                        this.currentImg = this.images.length - 1;
+                    } else {
                     this.currentImg--;
+                    }
                 },
                 selectImg: function (index) {
                     this.currentImg = index;
